@@ -9,7 +9,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/yousuf-26-07/ci-cd-app.git'
+                git branch: 'main', url: 'https://github.com/yousuf-26-07/ci-cd-app.git'
             }
         }
 
