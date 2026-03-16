@@ -15,7 +15,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t $cicd_app .'
+                sh 'docker build -t $IMAGE_NAME .'
             }
         }
 
@@ -29,7 +29,7 @@ pipeline {
 
         stage('Push Image') {
             steps {
-                sh 'docker push $cicd_app'
+                sh 'docker build -t $IMAGE_NAME .'
             }
         }
     }
